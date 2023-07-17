@@ -1,0 +1,8 @@
+//color
+$color-primary:#ffe001
+$color-primary-light:#e4e2a7
+$color-gray-light:#d5d5d5
+$color-gray-dark:#151515
+//font-familes
+frederickathe ,
+montserrat extrabold

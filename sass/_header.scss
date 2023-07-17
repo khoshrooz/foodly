@@ -1,0 +1,147 @@
+.header {
+  max-height: 100vh;
+  background-image: linear-gradient(
+    105deg,
+    rgba($color-primary, 1) 65%,
+    rgba($color-primary-light, 1) 35%
+  );
+  padding: 50px 70px;
+  position: relative;
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-img {
+      height: 45px;
+    }
+  }
+  &__phone {
+    display: flex;
+    align-items: end;
+    &-img {
+      height: 40px;
+      margin-left: 10px;
+    }
+    p {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+    span {
+      display: block;
+      font-size: 17px;
+    }
+  }
+  &::after {
+    content: url(../img/spageti.png);
+    position: absolute;
+    bottom: -147px;
+    left: -136px;
+  }
+}
+
+.navbar {
+  &__list {
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 756px;
+  }
+  &__item {
+  }
+  &__link {
+    text-decoration: none;
+    display: inline-block;
+    color: #000;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all ease-in 0.4s;
+    &:hover,
+    &:visited {
+      transform: rotate(-3deg) scale(1.1);
+    }
+  }
+}
+
+.heading__box {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &-photo {
+    width: 35%;
+    position: relative;
+    &::before {
+      content: url(../img/tomato.png);
+      position: absolute;
+      bottom: -17px;
+      left: -98px;
+    }
+    &::after {
+      content: url(../img/leaf2.png);
+      position: absolute;
+      bottom: 6px;
+      right: -90px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-2 {
+    font-family: "Gabelisa";
+    font-size: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    &::before {
+      content: url(../img/leaf.png);
+      position: absolute;
+      bottom: -17px;
+      left: -98px;
+    }
+    &::after {
+      content: url(../img/spa.png);
+      position: absolute;
+      bottom: 6px;
+      right: -200px;
+    }
+  }
+  &-1 {
+    font-family: Fredericka the Great;
+    font-size: 75px;
+    margin-bottom: 15px;
+  }
+  &-3 {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    border-bottom: solid 1px rgba(#3b3a3a, 0.4);
+    margin-bottom: 20px;
+  }
+  &-btn {
+    border: solid 1px rgba(#000, 0.6);
+  }
+}
+
+.font__number {
+  display: flex;
+  align-items: center;
+  font-family: Fredericka the Great;
+  width: 45%;
+  &-1 {
+    font-size: 12px;
+  }
+  &-2 {
+    font-size: 35px;
+  }
+}

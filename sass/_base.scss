@@ -1,0 +1,50 @@
+//color
+$color-primary: #ffe001;
+$color-primary-light: #e4e2a7;
+$color-gray-light: #d5d5d5;
+$color-gray-dark: #151515;
+//font-familes
+// frederickathe,montserrat extrabold
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: " Montserrat ", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.heading-4 {
+  font-weight: 700;
+  font-size: 19px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.heading-5 {
+  margin: 20px 0;
+}
+
+.btn {
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: $color-primary;
+  font-weight: 800;
+  padding: 7px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 1s;
+  &:hover,
+  &:visited {
+    background-color: #e38c04;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(#000000, 0.4);
+    border: solid 1px rgba(#e38c04, 0.6);
+  }
+}
