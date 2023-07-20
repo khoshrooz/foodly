@@ -10,24 +10,38 @@ body {
   font-size: 16px;
   font-weight: 400; }
 
+.heading-2 {
+  font-family: Fredericka the Great;
+  font-size: 50px;
+  margin-bottom: 10px; }
+
+.heading--2 {
+  font-family: Fredericka the Great;
+  font-size: 41px;
+  margin-bottom: 30px; }
+
 .heading-4 {
   font-weight: 700;
-  font-size: 19px;
+  font-size: 20px;
   text-transform: uppercase;
   margin-top: 20px; }
 
+.heading__4 {
+  font-weight: 700;
+  font-size: 21px;
+  text-transform: uppercase;
+  margin-bottom: 16px; }
+
 .heading-5 {
-  margin: 20px 0; }
+  margin: 20px 0;
+  font-size: 17px;
+  font-weight: 400; }
 
 .btn {
-  font-size: 14px;
   text-transform: uppercase;
   background-color: #ffe001;
-  font-weight: 800;
-  padding: 7px 20px;
   border-radius: 2px;
   cursor: pointer;
-  margin-top: 20px;
   transition: all 1s; }
   .btn:hover, .btn:visited {
     background-color: #e38c04;
@@ -35,31 +49,197 @@ body {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     border: solid 1px rgba(227, 140, 4, 0.6); }
 
+.features {
+  display: grid;
+  padding: 50px 60px;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, min-content));
+  grid-template-rows: 2fr;
+  margin-bottom: 40px; }
+  .features-image {
+    display: inline-block;
+    position: relative; }
+    .features-image-1 {
+      grid-column: 1/2;
+      grid-row: 1/3; }
+      .features-image-1 span {
+        top: 40px;
+        font-size: 25px; }
+      .features-image-1 p {
+        top: 80px;
+        font-size: 42px;
+        width: 50%; }
+    .features-image-2 {
+      grid-row: 1/2; }
+      .features-image-2 span {
+        top: 30px;
+        font-size: 25px; }
+      .features-image-2 p {
+        top: 65px;
+        font-size: 33px;
+        width: 45%; }
+    .features-image-3 {
+      grid-column: 2/3; }
+      .features-image-3 span {
+        top: 30px;
+        font-size: 25px; }
+      .features-image-3 p {
+        top: 65px;
+        font-size: 33px; }
+  .features-span1, .features-span2 {
+    position: absolute;
+    left: 30px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase; }
+
+.footer {
+  background-image: url(../img/footer.png);
+  background-size: cover;
+  margin-top: 60px;
+  padding: 40px 110px;
+  max-height: 580px; }
+  .footer__logo {
+    width: 310px;
+    margin-bottom: 54px 0; }
+  .footer__paragraph {
+    display: flex;
+    padding: 70px 0;
+    justify-content: space-between; }
+  .footer p {
+    color: #fff;
+    width: 47%;
+    line-height: 19px; }
+  .footer-icon {
+    fill: #ffe001;
+    width: 25px;
+    height: 25px;
+    margin-right: 12px; }
+  .footer-mail, .footer-adress {
+    display: flex;
+    align-items: center; }
+    .footer-mail a, .footer-adress a {
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.4s; }
+      .footer-mail a:hover, .footer-mail a:active, .footer-mail a:visited, .footer-adress a:hover, .footer-adress a:active, .footer-adress a:visited {
+        color: #ffe001; }
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px; }
+  .copyright p {
+    font-family: " Montserrat "; }
+  .copyright-images {
+    cursor: pointer; }
+    .copyright-images img:hover {
+      animation: updown 0.8s 0.2s; }
+
+@keyframes updown {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-20px) scale(1.3); }
+  100% {
+    transform: translateY(3px); } }
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 65%;
+  margin: 0 auto 100px; }
+  .form__text {
+    text-align: center;
+    margin-bottom: 40px; }
+  .form-name, .form-email, .form-people {
+    border-radius: 4px; }
+    .form-name::placeholder, .form-email::placeholder, .form-people::placeholder {
+      font-size: 16.7px; }
+  .form-date {
+    border-radius: 4px; }
+  .form-time {
+    border-radius: 4px; }
+  .form-submit {
+    background: #ffe001;
+    font-size: 21px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    border-radius: 4px;
+    border: solid 1px #ffe001; }
+
+.gallery__text {
+  width: 77%;
+  margin: 0 auto;
+  text-align: center; }
+
+.gallery__images {
+  display: flex;
+  padding: 40px 0;
+  max-height: 370px;
+  margin-top: 30px; }
+
+.gallery__image {
+  width: 33.333%;
+  object-fit: cover;
+  transition: all ease-in-out 0.4s; }
+  .gallery__image:hover {
+    transform: scale(1.12);
+    z-index: 10;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); }
+
+.gallery:hover .gallery__image:not(:hover) {
+  filter: brightness(0.35); }
+
+.gallery__circle {
+  display: flex;
+  justify-content: center;
+  gap: 7px; }
+  .gallery__circle span {
+    margin: 25px 0 60px 0;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #e0d9d9;
+    transition: all 0.4s; }
+    .gallery__circle span:hover {
+      background-color: #ffe001; }
+
 .header {
   max-height: 100vh;
-  background-image: linear-gradient(105deg, #ffe001 65%, #e4e2a7 35%);
-  padding: 50px 70px;
+  background-image: linear-gradient(100deg, #ffe001 70%, #e4e2a7 30%);
+  padding: 50px 57px 40px 55px;
   position: relative; }
   .header__logo {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    .header__logo a {
+      text-decoration: none;
+      color: #000; }
+      .header__logo a:hover, .header__logo a:active {
+        color: #ffe001; }
     .header__logo-img {
-      height: 45px; }
+      height: 63px; }
   .header__phone {
     display: flex;
-    align-items: end; }
+    align-items: start; }
     .header__phone-img {
-      height: 40px;
-      margin-left: 10px; }
+      height: 55px;
+      margin-left: 13px; }
     .header__phone p {
       font-weight: 800;
       text-transform: uppercase;
-      font-size: 11px;
-      letter-spacing: 1px; }
+      font-size: 17px;
+      text-align: end; }
     .header__phone span {
       display: block;
-      font-size: 17px; }
+      font-size: 28px; }
   .header::after {
     content: url(../img/spageti.png);
     position: absolute;
@@ -70,17 +250,18 @@ body {
   text-transform: uppercase;
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  width: 40%;
-  margin-top: 20px;
-  margin-left: 756px; }
+  justify-content: flex-end;
+  margin-top: 20px; }
+
+.navbar__item {
+  margin-left: 60px; }
 
 .navbar__link {
   text-decoration: none;
   display: inline-block;
   color: #000;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 17px;
   cursor: pointer;
   transition: all ease-in 0.4s; }
   .navbar__link:hover, .navbar__link:visited {
@@ -90,69 +271,76 @@ body {
   padding-top: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-between;
+  padding: 20px 15px; }
   .heading__box-photo {
-    width: 35%;
+    width: 36%;
+    margin: 14px 75px 13px auto;
     position: relative; }
+    .heading__box-photo img {
+      width: 100%; }
     .heading__box-photo::before {
       content: url(../img/tomato.png);
       position: absolute;
-      bottom: -17px;
+      bottom: -2px;
       left: -98px; }
     .heading__box-photo::after {
       content: url(../img/leaf2.png);
       position: absolute;
       bottom: 6px;
       right: -90px; }
-    .heading__box-photo img {
-      width: 100%; }
 
 .heading {
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  .heading-2 {
+  align-items: center;
+  margin-top: -60px; }
+  .heading-3 {
     font-family: "Gabelisa";
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 57px;
+    margin-bottom: 12px;
     position: relative; }
-    .heading-2::before {
+    .heading-3::before {
       content: url(../img/leaf.png);
       position: absolute;
       bottom: -17px;
       left: -98px; }
-    .heading-2::after {
+    .heading-3::after {
       content: url(../img/spa.png);
       position: absolute;
-      bottom: 6px;
-      right: -200px; }
+      bottom: -18px;
+      right: -223px; }
   .heading-1 {
     font-family: Fredericka the Great;
-    font-size: 75px;
-    margin-bottom: 15px; }
-  .heading-3 {
-    font-size: 22px;
+    font-size: 90px;
+    margin-bottom: 10px; }
+  .heading--4 {
+    font-size: 26px;
     font-weight: 700;
     padding-bottom: 15px;
     border-bottom: solid 1px rgba(59, 58, 58, 0.4);
-    margin-bottom: 20px; }
+    margin-bottom: 12px; }
   .heading-btn {
-    border: solid 1px rgba(0, 0, 0, 0.6); }
+    border: solid 1px rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    padding: 13px 40px;
+    margin-top: 10px;
+    font-weight: 800; }
 
 .font__number {
   display: flex;
   align-items: center;
   font-family: Fredericka the Great;
-  width: 45%; }
+  width: 50%; }
   .font__number-1 {
-    font-size: 12px; }
+    font-size: 19px; }
   .font__number-2 {
-    font-size: 35px; }
+    font-size: 55px; }
 
 .menu {
   padding: 90px 0; }
   .menu__paragraph {
-    width: 85%;
+    width: 77%;
     margin: 0 auto;
     text-align: center; }
     .menu__paragraph p {
@@ -164,32 +352,35 @@ body {
     margin-bottom: 10px; }
   .menu__box {
     display: grid;
-    padding: 0 65px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-column-gap: 10px;
+    padding: 0 58px;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    grid-column-gap: 70px;
     justify-items: center;
     position: relative; }
     .menu__box::after {
       content: "";
       display: block;
-      height: 100px;
+      height: 140px;
       width: 100%;
       right: 0;
       z-index: -10;
       position: absolute;
       left: 0;
-      top: 116px;
+      top: 150px;
       background-color: #e4e2a7; }
     .menu__box-img {
-      height: 270px;
-      width: 270px; }
+      height: 345px;
+      width: 345px; }
     .menu__box figure {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 25px; }
+      margin-top: 35px; }
     .menu__box figcaption {
       text-align: center;
-      width: 300px; }
+      width: 345px; }
   .menu-btn {
-    border: none; }
+    font-size: 16px;
+    border: none;
+    font-weight: 700;
+    padding: 13px 28px; }
