@@ -3,17 +3,43 @@
     width: 77%;
     margin: 0 auto;
     text-align: center;
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 110px;
+    }
+  }
+  p {
+    line-height: 25px;
   }
   &__images {
     display: flex;
     padding: 40px 0;
     max-height: 370px;
     margin-top: 30px;
+    @media only screen and (max-width: 600px) {
+      display: block;
+    }
   }
   &__image {
     width: 33.333%;
     object-fit: cover;
     transition: all ease-in-out 0.4s;
+    @media only screen and (max-width: 600px) {
+      width: 35%;
+      position: absolute;
+      &-1 {
+        bottom: 123px;
+        left: 52px;
+      }
+      &-2 {
+        bottom: 100px;
+        left: 170px;
+        z-index: 2;
+      }
+      &-3 {
+        bottom: 153px;
+        right: 55px;
+      }
+    }
     &:hover {
       transform: scale(1.12);
       z-index: 10;
@@ -39,5 +65,15 @@
         background-color: $color-primary;
       }
     }
+  }
+  @media only screen and (max-width: 1000px) {
+    p {
+      font-size: 14px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    // width: 80%;
+    position: relative;
+    // margin: 0 auto;
   }
 }

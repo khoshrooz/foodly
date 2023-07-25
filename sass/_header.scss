@@ -7,6 +7,9 @@
   );
   padding: 50px 57px 40px 55px;
   position: relative;
+  @media only screen and (max-width: 600px) {
+    padding: 45px 38px;
+  }
   &__logo {
     display: flex;
     align-items: center;
@@ -21,6 +24,15 @@
     }
     &-img {
       height: 63px;
+      @media only screen and (max-width: 1270px) {
+        height: 50px;
+      }
+      @media only screen and (max-width: 800px) {
+        height: 37px;
+      }
+      @media only screen and (max-width: 600px) {
+        height: 32px;
+      }
     }
   }
   &__phone {
@@ -29,16 +41,44 @@
     &-img {
       height: 55px;
       margin-left: 13px;
+      @media only screen and (max-width: 1270px) {
+        height: 45px;
+      }
+      @media only screen and (max-width: 800px) {
+        height: 40px;
+      }
+      @media only screen and (max-width: 600px) {
+        height: 30px;
+        margin-left: 10px;
+      }
     }
     p {
       font-weight: 800;
       text-transform: uppercase;
       font-size: 17px;
       text-align: end;
+      @media only screen and (max-width: 1270px) {
+        font-size: 14px;
+      }
+      @media only screen and (max-width: 800px) {
+        font-size: 12px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 9px;
+      }
     }
     span {
       display: block;
       font-size: 28px;
+      @media only screen and (max-width: 1270px) {
+        font-size: 21px;
+      }
+      @media only screen and (max-width: 800px) {
+        font-size: 17px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 12px;
+      }
     }
   }
   &::after {
@@ -46,21 +86,131 @@
     position: absolute;
     bottom: -147px;
     left: -136px;
+    @media only screen and (max-width: 700px) {
+      display: none;
+    }
   }
 }
 
-.navbar {
-  &__list {
+.navbar__hamber {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  @media only screen and (max-width: 850px) {
+    &-checkbox:checked ~ &-list {
+      display: flex;
+      z-index: 100;
+      position: fixed;
+      top: 106px;
+      right: 143px;
+      width: 100%;
+    }
+    @media only screen and (max-width: 600px) {
+      &-checkbox:checked ~ &-list {
+        top: 100px;
+        right: 22%;
+        width: 100%;
+      }
+    }
+    &-checkbox:checked ~ &-background {
+      transform: scale(12);
+      opacity: 1;
+    }
+    &-checkbox:checked + &-label span {
+      background-color: transparent;
+    }
+    &-checkbox:checked + &-label span::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+    &-checkbox:checked + &-label span::after {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+  }
+  &-checkbox {
+    display: none;
+  }
+  &-label {
+    display: none;
+    background-color: $color-primary;
+    width: 54px;
+    height: 54px;
+    box-shadow: 10px 10px 45px rgba(#000, 0.4);
+    border-radius: 100%;
+    cursor: pointer;
+    position: fixed;
+    right: 44px;
+    top: 106px;
+    z-index: 2500;
+    @media only screen and (max-width: 850px) {
+      display: flex;
+    }
+    @media only screen and (max-width: 600px) {
+      width: 45px;
+      height: 45px;
+      right: 35px;
+    }
+    span {
+      background-color: #000;
+      width: 30px;
+      height: 1px;
+      display: inline-block;
+      position: relative;
+      top: 26px;
+      left: 27.5px;
+      transform: translate(-50%, -50%);
+      &::after,
+      &::before {
+        content: "";
+        width: 30px;
+        height: 1px;
+        left: 0;
+        background-color: #000;
+        display: inline-block;
+        position: absolute;
+      }
+      &::after {
+        bottom: 10px;
+      }
+      &::before {
+        top: 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 25px;
+        top: 22px;
+        left: 23px;
+        &::after,
+        &::before {
+          width: 25px;
+        }
+      }
+    }
+  }
+  &-list {
     text-transform: uppercase;
     list-style: none;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     margin-top: 20px;
+    z-index: 20;
+    @media only screen and (max-width: 850px) {
+      display: none;
+      animation: MoveInRight 2s;
+    }
   }
-  &__item {
-    margin-left: 60px;
+  &-item {
+    margin-left: 100px;
+    @media only screen and (max-width: 850px) {
+      margin-left: 50px;
+    }
+    @media only screen and (max-width: 600px) {
+      margin-left: 7%;
+    }
   }
-  &__link {
+  a {
     text-decoration: none;
     display: inline-block;
     color: #000;
@@ -68,9 +218,31 @@
     font-size: 17px;
     cursor: pointer;
     transition: all ease-in 0.4s;
+    @media only screen and (max-width: 850px) {
+      font-size: 13px;
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 11px;
+    }
     &:hover,
     &:visited {
       transform: rotate(-3deg) scale(1.1);
+    }
+  }
+  &-background {
+    background-color: rgba($color-primary, 0.7);
+    width: 141px;
+    height: 5px;
+    top: 133px;
+    right: 0;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    position: fixed;
+    transition: all ease-in 0.7s;
+    @media only screen and (max-width: 600px) {
+      height: 4px;
+      top: 127px;
     }
   }
 }
@@ -81,24 +253,33 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 15px;
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
   &-photo {
     width: 36%;
     margin: 14px 75px 13px auto;
+    animation: MoveInRight 3s ease-in;
     position: relative;
-    img {
-      width: 100%;
+    @media only screen and (max-width: 1270px) {
+      width: 37%;
+      margin: 14px 15px 13px auto;
     }
-    &::before {
-      content: url(../img/tomato.png);
-      position: absolute;
-      bottom: -2px;
-      left: -98px;
+    @media only screen and (max-width: 600px) {
+      display: none;
     }
     &::after {
       content: url(../img/leaf2.png);
       position: absolute;
-      bottom: 6px;
-      right: -90px;
+      bottom: -11px;
+      right: -68px;
+      @media only screen and (max-width: 850px) {
+        display: none;
+      }
+    }
+    img {
+      width: 100%;
+      filter: drop-shadow(0 10px 40px rgba(#000, 0.4));
     }
   }
 }
@@ -108,11 +289,37 @@
   flex-direction: column;
   align-items: center;
   margin-top: -60px;
+  @media only screen and (max-width: 850px) {
+    margin-top: -20px;
+  }
+  @media only screen and (max-width: 700px) {
+    margin-top: 0;
+  }
+  @media only screen and (max-width: 600px) {
+    display: block;
+    text-align: center;
+  }
   &-3 {
     font-family: "Gabelisa";
     font-size: 57px;
     margin-bottom: 12px;
     position: relative;
+    @media only screen and (max-width: 1270px) {
+      font-size: 40px;
+      margin-bottom: 8px;
+      &::before {
+        display: none;
+      }
+    }
+    @media only screen and (max-width: 970px) {
+      font-size: 35px;
+    }
+    @media only screen and (max-width: 800px) {
+      font-size: 30px;
+    }
+    @media only screen and (max-width: 700px) {
+      font-size: 27px;
+    }
     &::before {
       content: url(../img/leaf.png);
       position: absolute;
@@ -124,12 +331,28 @@
       position: absolute;
       bottom: -18px;
       right: -223px;
+      @media only screen and (max-width: 850px) {
+        display: none;
+      }
     }
   }
   &-1 {
     font-family: Fredericka the Great;
     font-size: 90px;
     margin-bottom: 10px;
+    @media only screen and (max-width: 1270px) {
+      font-size: 75px;
+      margin-bottom: 7px;
+    }
+    @media only screen and (max-width: 970px) {
+      font-size: 60px;
+    }
+    @media only screen and (max-width: 800px) {
+      font-size: 50px;
+    }
+    @media only screen and (max-width: 700px) {
+      font-size: 40px;
+    }
   }
   &--4 {
     font-size: 26px;
@@ -137,6 +360,21 @@
     padding-bottom: 15px;
     border-bottom: solid 1px rgba(#3b3a3a, 0.4);
     margin-bottom: 12px;
+    @media only screen and (max-width: 1270px) {
+      font-size: 20px;
+      margin-bottom: 7px;
+      padding-bottom: 7px;
+    }
+    @media only screen and (max-width: 970px) {
+      font-size: 18px;
+    }
+    @media only screen and (max-width: 800px) {
+      font-size: 16px;
+    }
+    @media only screen and (max-width: 700px) {
+      font-size: 14px;
+      display: inline-block;
+    }
   }
   &-btn {
     border: solid 1px rgba(#000, 0.6);
@@ -144,18 +382,63 @@
     padding: 13px 40px;
     margin-top: 10px;
     font-weight: 800;
+    @media only screen and (max-width: 1270px) {
+      font-size: 18px;
+      padding: 9px 25px;
+    }
+    @media only screen and (max-width: 800px) {
+      font-size: 15px;
+      padding: 7px 20px;
+    }
+    @media only screen and (max-width: 700px) {
+      font-size: 13px;
+      padding: 6px 15px;
+    }
   }
-}
-
-.font__number {
-  display: flex;
-  align-items: center;
-  font-family: Fredericka the Great;
-  width: 50%;
-  &-1 {
-    font-size: 19px;
-  }
-  &-2 {
-    font-size: 55px;
+  .font__number {
+    display: flex;
+    align-items: center;
+    font-family: Fredericka the Great;
+    width: 50%;
+    @media only screen and (max-width: 700px) {
+      width: 60%;
+    }
+    @media only screen and (max-width: 600px) {
+      width: 65%;
+      margin: 0 auto;
+      gap: 20px;
+      justify-content: center;
+    }
+    &-1 {
+      font-size: 19px;
+      @media only screen and (max-width: 1270px) {
+        font-size: 14px;
+      }
+      @media only screen and (max-width: 800px) {
+        font-size: 12px;
+      }
+      @media only screen and (max-width: 700px) {
+        font-size: 11px;
+      }
+    }
+    &-2 {
+      font-size: 55px;
+      position: relative;
+      @media only screen and (max-width: 1270px) {
+        font-size: 35px;
+        &::before {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 800px) {
+        font-size: 27px;
+      }
+      &::before {
+        content: url(../img/tomato.png);
+        position: absolute;
+        bottom: -60px;
+        left: 290px;
+      }
+    }
   }
 }

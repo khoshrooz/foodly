@@ -20,22 +20,25 @@
                 <img src="./img/iphone.png" alt="iphone" class="header__phone-img" />
             </div>
         </div>
-        <nav class="navbar">
-            <ul class="navbar__list">
-                <li class="navbar__item">
-                    <a href="#" class="navbar__link">Home</a>
+        <form class="navbar__hamber">
+            <input type="checkbox" id="hamber" class="navbar__hamber-checkbox">
+            <label for="hamber" class="navbar__hamber-label"><span class="navbar__hamber-span"></span></label>
+            <div class="navbar__hamber-background"></div>
+            <ul class="navbar__hamber-list">
+                <li class="navbar__hamber-item">
+                    <a href="#">Home</a>
                 </li>
-                <li class="navbar__item">
-                    <a href="#" class="navbar__link">Menu</a>
+                <li class="navbar__hamber-item">
+                    <a href="#">Menu</a>
                 </li>
-                <li class="navbar__item">
-                    <a href="#" class="navbar__link">Our story</a>
+                <li class="navbar__hamber-item">
+                    <a href="#">Our story</a>
                 </li>
-                <li class="navbar__item">
-                    <a href="#" class="navbar__link">Contact us</a>
+                <li class="navbar__hamber-item">
+                    <a href="#">Contact us</a>
                 </li>
             </ul>
-        </nav>
+        </form>
         <div class="heading__box">
             <div class="heading">
                 <h3 class="heading-3">Are you hungry?</h3>
@@ -135,12 +138,14 @@
             <h4 class="heading__4">RESERVATION</h4>
             <div class="heading-2">BOOK YOUR TABLE</div>
         </div>
-        <input type="text" placeholder="Name" class="form-name" />
-        <input type="email" placeholder="Email" class="form-email" />
-        <input type="date" placeholder="Date" class="form-date" />
-        <input type="time" placeholder="Time" class="form-time" />
-        <input type="number" placeholder="People" class="form-people" />
-        <input type="submit" value="FIND A TABLE" class="form-submit" />
+        <div class="form__input">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="date" placeholder="Date" />
+            <input type="time" placeholder="Time" />
+            <input type="number" placeholder="People" />
+            <input type="submit" value="FIND A TABLE" />
+        </div>
     </div>
     <footer class="footer">
         <a href="/"><img src="./img/logo2.png" alt="yellow logo" class="footer__logo" /></a>
@@ -148,28 +153,28 @@
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi perspiciatis magnam incidunt porro nulla id amet, voluptate, pariatur, laudantium tempora in provident iusto explicabo suscipit itaque delectus voluptatem numquam dolorum!
             </p>
-            <div>
+            <div class="footer-2">
                 <div class="footer-adress">
                     <svg class="footer-icon">
             <use xlink:href="./img/sprite.svg#location-pin" ><use/>
             </svg>
-                    <a href="GoogleMaps:Main road,Building Names,Country">Main road,Building Names,Country</a>
+                    <a href="GoogleMaps:Main road,Building Names,Country" target="_blank">Main road,Building Names,Country</a>
                 </div>
                 <div class="footer-mail">
                     <svg class="footer-icon">
           <use xlink:href="./img/sprite.svg#mail" ><use/>
           </svg>
-                    <a href="mailto:Info@Companyname.com">Info@Companyname.com</a>
+                    <a href="mailto:Info@Companyname.com" target="_blank">Info@Companyname.com</a>
                 </div>
             </div>
         </div>
         <div class="copyright">
             <p>&copy;Company Name 2023. All rights reseved</p>
             <div class="copyright-images">
-                <a href="https://instagram.com"><img src="./img/instagram.png" alt="instagram"></a>
-                <a href="https://facebook.com"><img src="./img/facebook.png" alt="facebook"></a>
-                <a href="https://twitter.com"><img src="./img/twitter.png" alt="twitter"></a>
-                <a href="https://whatsapp.com"> <img src="./img/whatsapp.png" alt="whatsapp"></a>
+                <a href="https://instagram.com" target="_blank"><img src="./img/instagram.png" alt="instagram"></a>
+                <a href="https://facebook.com" target="_blank"><img src="./img/facebook.png" alt="facebook"></a>
+                <a href="https://twitter.com" target="_blank"><img src="./img/twitter.png" alt="twitter"></a>
+                <a href="https://whatsapp.com" target="_blank"> <img src="./img/whatsapp.png" alt="whatsapp"></a>
             </div>
         </div>
     </footer>
